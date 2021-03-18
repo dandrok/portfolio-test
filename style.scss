@@ -1,0 +1,248 @@
+$linkYellow: rgb(254, 246, 37);
+$linkBlack: rgb(64, 60, 53);
+$linkWhite: rgb(252, 252, 252);
+
+body {
+  font-family: "Ubuntu Mono", monospace !important;
+  max-width: 90vw;
+  margin: 0 auto !important;
+  float: none !important;
+  font-size: 100%;
+  color: $linkBlack;
+  background-color: $linkWhite;
+}
+
+.title-main {
+  width: 290px;
+  h2 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, $linkYellow 0%, $linkYellow 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.3em;
+    background-position: 0 88%;
+    transition: background-size 0.3s ease-in;
+    transform-origin: 0 0; //rotate
+    transform: rotate(-90deg); //rotate
+    &:hover {
+      background-size: 100% 88%;
+      cursor: vertical-text;
+    }
+  }
+}
+
+span {
+  font-weight: 700;
+  background-image: linear-gradient(120deg, #fef625 0%, #fef625 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+  background-position: 0 88%;
+  transition: background-size 0.3s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
+#navbar {
+  display: grid;
+  min-height: 40px;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+
+  .logo {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    font-size: 56px;
+  }
+  .nav {
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 6em;
+    font-size: 1.5rem;
+  }
+}
+
+#hero {
+  .cointainer-hero {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+    h1 {
+      grid-column: 1 / span 7;
+      font-size: 5.2rem;
+    }
+  }
+  .arrow {
+    position: relative;
+    left: 33%;
+    padding-bottom: 2vw;
+    max-width: 32px;
+    svg {
+      height: auto;
+      width: 32px;
+      transition: all 0.2s;
+      transition-timing: ease-in-out;
+    }
+    svg:hover {
+      transform: translate(0, 5px);
+    }
+  }
+}
+
+main {
+  .kreska {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    /* This will center the border. */
+    width: 66%; /* Change this to whatever width you want. */
+    padding-top: 2vw; /* This creates some space between the element and the border. */
+    border-top: $linkBlack solid 1px; /* This creates the border. Replace black with whatever color you want. */
+  }
+  #latest-projects {
+    .cointainer-projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px 10px;
+      grid-template-areas:
+        ". ."
+        ". .";
+      max-width: 600px;
+      margin-left: 50px; // margines meidzy ukosnym
+      .div-project {
+        border: $linkBlack solid 1px;
+        width: 300px;
+        padding: 10px;
+        background-color: $linkYellow;
+        transition: all 0.2s ease-in-out;
+        h3 {
+          padding-bottom: 10px;
+          font-size: 1.75rem;
+          font-weight: 700;
+        }
+        .projects-icons {
+          display: grid;
+          grid-auto-flow: column;
+
+          .icons {
+            display: grid;
+            justify-content: start;
+            align-content: center;
+            grid-auto-flow: column;
+            .images-icons {
+              margin-right: 10px;
+              width: 1.75rem;
+              height: auto;
+              padding-top: 10px;
+            }
+          }
+          .arrow-link {
+            display: grid;
+            justify-content: right;
+            align-content: center;
+            svg {
+              width: 3rem;
+              height: auto;
+            }
+          }
+        }
+      }
+      .div-project:hover {
+        transform: translate(4px, -4px);
+
+        box-shadow: -7px 7px 0px 0px #403c35;
+      }
+    }
+  }
+}
+
+#about-me {
+  p {
+    max-width: 50vw;
+    margin-left: 50px;
+    font-size: 1rem;
+    line-height: 32px;
+    span {
+      font-weight: 700;
+    }
+  }
+  .title-main {
+    .about-me-title {
+      width: 165px;
+    }
+  }
+}
+
+#skills {
+  p {
+    max-width: 50vw;
+    margin-left: 50px;
+    font-size: 1rem;
+    line-height: 32px;
+    span {
+      font-weight: 700;
+    }
+  }
+  .title-main {
+    .skill-title {
+      width: 130px;
+    }
+  }
+}
+
+#contact {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  /* This will center the border. */
+  width: 100%; /* Change this to whatever width you want. */
+  padding-top: 2vw; /* This creates some space between the element and the border. */
+  border-top: $linkBlack solid 1px; /* This creates the border. Replace black with whatever color you want. */
+
+  h2 {
+    font-size: 2rem;
+  }
+  .email-one {
+    display: inline-flex;
+    .email {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    svg {
+      width: 32px;
+      transition: all 0.2s;
+      transition-timing: ease-in-out;
+    }
+    svg:hover {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+#footer {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  /* This will center the border. */
+  width: 100%; /* Change this to whatever width you want. */
+  padding-bottom: 2vw; /* This creates some space between the element and the border. */
+  border-top: $linkBlack solid 1px; /* This creates the border. Replace black with whatever color you want. */
+  .cointainer-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .left {
+      display: inline-flex;
+      svg {
+        width: 16px;
+        padding-left: 5px;
+      }
+    }
+    .right {
+      display: inline-flex;
+      justify-items: end;
+      grid-column-start: end;
+    }
+  }
+}
