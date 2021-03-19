@@ -16,4 +16,4 @@ The project has a lot of white space - I know that and it was the intended effec
 Great fun - the whole project from scratch to start took about 10 hours, including the prototype and code writing.
 
 
-> [LIVE - DEMO](https://dandrok.github.io/portfolio-test/)
+> [LIVE - DEMO](https://dandrok.github.io/portfolio-test/?target=_blank)
