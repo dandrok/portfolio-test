@@ -2,6 +2,15 @@ $linkYellow: rgb(254, 246, 37);
 $linkBlack: rgb(64, 60, 53);
 $linkWhite: rgb(252, 252, 252);
 
+$small: 400px;
+$h-small: 700px;
+$medium: 900px;
+$h-medium: 1280px;
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Ubuntu Mono", monospace !important;
   max-width: 90vw;
@@ -10,6 +19,15 @@ body {
   font-size: 100%;
   color: $linkBlack;
   background-color: $linkWhite;
+}
+
+a {
+  text-decoration: none;
+  color: $linkBlack;
+}
+
+.simple-tippy {
+  font-weight: 700;
 }
 
 .title-main {
@@ -43,6 +61,26 @@ span {
   }
 }
 
+.cool-link {
+  display: inline-block;
+  color: $linkBlack;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $linkYellow;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  //transition: width .3s;
+}
+
 #navbar {
   display: grid;
   min-height: 40px;
@@ -54,6 +92,16 @@ span {
     justify-content: start;
     align-content: center;
     font-size: 56px;
+    font-family: "Poiret One", cursive;
+    a {
+      transform: rotate(-90deg);
+      transition: all 1s;
+      transition-timing: ease-out;
+
+      &:hover {
+        transform: rotate(1deg);
+      }
+    }
   }
   .nav {
     display: grid;
@@ -62,6 +110,18 @@ span {
     grid-auto-flow: column;
     grid-gap: 6em;
     font-size: 1.5rem;
+    a {
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: $h-medium) {
+      grid-gap: 3em;
+    }
+    @media screen and (max-width: $medium) {
+      grid-gap: 2em;
+    }
+    @media screen and (max-width: $small) {
+      grid-gap: 1em;
+    }
   }
 }
 
@@ -72,8 +132,32 @@ span {
     margin-top: 5vw;
     margin-bottom: 3vw;
     h1 {
-      grid-column: 1 / span 7;
-      font-size: 5.2rem;
+      grid-column: 1 / span 10;
+      font-size: 7rem;
+    }
+    @media screen and (max-width: $h-medium) {
+      h1 {
+        font-size: 7rem;
+        grid-column: 1 / span 12;
+      }
+    }
+    @media screen and (max-width: $medium) {
+      h1 {
+        font-size: 5rem;
+        grid-column: 1 / span 12;
+      }
+    }
+    @media screen and (max-width: $h-small) {
+      h1 {
+        font-size: 4rem;
+        grid-column: 1 / span 12;
+      }
+    }
+    @media screen and (max-width: $small) {
+      h1 {
+        font-size: 3rem;
+        grid-column: 1 / span 12;
+      }
     }
   }
   .arrow {
@@ -90,6 +174,15 @@ span {
     svg:hover {
       transform: translate(0, 5px);
     }
+    @media screen and (max-width: $h-medium) {
+      left: 40%;
+    }
+    @media screen and (max-width: $medium) {
+      left: 50%;
+    }
+    @media screen and (max-width: $small) {
+      left: 50%;
+    }
   }
 }
 
@@ -101,6 +194,16 @@ main {
     width: 66%; /* Change this to whatever width you want. */
     padding-top: 2vw; /* This creates some space between the element and the border. */
     border-top: $linkBlack solid 1px; /* This creates the border. Replace black with whatever color you want. */
+
+    @media screen and (max-width: $h-medium) {
+      width: 80%;
+    }
+    @media screen and (max-width: $medium) {
+      width: 100%;
+    }
+    @media screen and (max-width: $small) {
+      width: 100%;
+    }
   }
   #latest-projects {
     .cointainer-projects {
@@ -150,11 +253,26 @@ main {
             }
           }
         }
+        @media screen and (max-width: $small) {
+          width: 80vw;
+        }
       }
       .div-project:hover {
         transform: translate(4px, -4px);
-
+        cursor: default;
         box-shadow: -7px 7px 0px 0px #403c35;
+      }
+      @media screen and (max-width: $h-small) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas:
+          "."
+          "."
+          "."
+          ".";
+        max-width: 300px;
       }
     }
   }
@@ -168,6 +286,18 @@ main {
     line-height: 32px;
     span {
       font-weight: 700;
+    }
+    @media screen and (max-width: $h-medium) {
+      max-width: 60vw;
+    }
+    @media screen and (max-width: $medium) {
+      max-width: 70vw;
+    }
+    @media screen and (max-width: $h-small) {
+      max-width: 80vw;
+    }
+    @media screen and (max-width: $small) {
+      max-width: 90vw;
     }
   }
   .title-main {
@@ -185,6 +315,18 @@ main {
     line-height: 32px;
     span {
       font-weight: 700;
+    }
+    @media screen and (max-width: $h-medium) {
+      max-width: 60vw;
+    }
+    @media screen and (max-width: $medium) {
+      max-width: 70vw;
+    }
+    @media screen and (max-width: $h-small) {
+      max-width: 80vw;
+    }
+    @media screen and (max-width: $small) {
+      max-width: 90vw;
     }
   }
   .title-main {
@@ -215,9 +357,19 @@ main {
       width: 32px;
       transition: all 0.2s;
       transition-timing: ease-in-out;
+      @media screen and (max-width: $small) {
+        display: none;
+      }
     }
     svg:hover {
       transform: rotate(-45deg);
+    }
+  }
+  @media screen and (max-width: $small) {
+    h2 {
+      span {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -232,17 +384,25 @@ main {
   .cointainer-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
     .left {
       display: inline-flex;
       svg {
         width: 16px;
         padding-left: 5px;
       }
+      @media screen and (max-width: $medium) {
+        display: none;
+      }
     }
     .right {
       display: inline-flex;
       justify-items: end;
       grid-column-start: end;
+      @media screen and (max-width: $medium) {
+        justify-items: center;
+        grid-column-start: auto;
+      }
     }
   }
 }

@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="script.js" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Patryk Stusik - personal website</title>
   </head>
   <body>
@@ -21,175 +26,219 @@
           <a href="#">p.</a>
         </div>
         <div class="nav">
-          <a href="#">Work</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#work" class="cool-link">Work</a>
+          <a href="#about" class="cool-link">About</a>
+          <a href="#contactme" class="cool-link">Contact</a>
         </div>
       </nav>
       <section id="hero">
         <div class="cointainer-hero">
           <h1>
             I design and develop expierience that make people's lives
-            <span>simple.</span>
+            <span id="myButton" class="simple-tippy"
+              ><a
+                href="https://simple.wikipedia.org/wiki/Simplicity"
+                target="_blank"
+                >simple.</a
+              ></span
+            >
           </h1>
         </div>
         <div class="arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+          <a href="#work">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
         </div>
       </section>
     </header>
     <!-- Document Main Starts -->
     <main>
       <div class="kreska"></div>
-      <section id="latest-projects">
-        <div class="cointainer-projects">
-          <div class="div-project">
-            <h3>STORY CREATOR</h3>
-            <p>
-              JavaScript project - generates random stories with the heroes of
-              your choice.
-            </p>
-            <div class="projects-icons">
-              <div class="icons">
-                <img class="images-icons" src="/images/behance.svg" alt="" />
-                <img class="images-icons" src="/images/github.svg" alt="" />
-              </div>
-              <div class="arrow-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+      <a name="work">
+        <section id="latest-projects">
+          <div class="cointainer-projects">
+            <div class="div-project">
+              <h3>STORY CREATOR</h3>
+              <p>
+                JavaScript project - generates random stories with the heroes of
+                your choice.
+              </p>
+              <div class="projects-icons">
+                <div class="icons">
+                  <img class="images-icons" src="/images/behance.svg" alt="" />
+                  <img class="images-icons" src="/images/github.svg" alt="" />
+                </div>
+                <div class="arrow-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="div-project">
-            <h3>STORY CREATOR</h3>
-            <p>
-              JavaScript project - generates random stories with the heroes of
-              your choice.
-            </p>
-            <div class="projects-icons">
-              <div class="icons">
-                <img class="images-icons" src="/images/behance.svg" alt="" />
-                <img class="images-icons" src="/images/github.svg" alt="" />
+            <div class="div-project">
+              <h3>STORY CREATOR</h3>
+              <p>
+                JavaScript project - generates random stories with the heroes of
+                your choice.
+              </p>
+              <div class="projects-icons">
+                <div class="icons">
+                  <img class="images-icons" src="/images/behance.svg" alt="" />
+                  <img class="images-icons" src="/images/github.svg" alt="" />
+                </div>
+                <div class="arrow-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div class="arrow-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+            </div>
+            <div class="div-project">
+              <h3>STORY CREATOR</h3>
+              <p>
+                JavaScript project - generates random stories with the heroes of
+                your choice.
+              </p>
+              <div class="projects-icons">
+                <div class="icons">
+                  <img class="images-icons" src="/images/behance.svg" alt="" />
+                  <img class="images-icons" src="/images/github.svg" alt="" />
+                </div>
+                <div class="arrow-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="div-project">
+              <h3>STORY CREATOR</h3>
+              <p>
+                JavaScript project - generates random stories with the heroes of
+                your choice.
+              </p>
+              <div class="projects-icons">
+                <div class="icons">
+                  <img class="images-icons" src="/images/behance.svg" alt="" />
+                  <img class="images-icons" src="/images/github.svg" alt="" />
+                </div>
+                <div class="arrow-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
-          <div class="div-project">
-            <h3>STORY CREATOR</h3>
-            <p>
-              JavaScript project - generates random stories with the heroes of
-              your choice.
-            </p>
-            <div class="projects-icons">
-              <div class="icons">
-                <img class="images-icons" src="/images/behance.svg" alt="" />
-                <img class="images-icons" src="/images/github.svg" alt="" />
-              </div>
-              <div class="arrow-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </div>
+          <div class="title-main">
+            <h2 class="latest-projects-title">Latest Projects.</h2>
           </div>
-          <div class="div-project">
-            <h3>STORY CREATOR</h3>
-            <p>
-              JavaScript project - generates random stories with the heroes of
-              your choice.
-            </p>
-            <div class="projects-icons">
-              <div class="icons">
-                <img class="images-icons" src="/images/behance.svg" alt="" />
-                <img class="images-icons" src="/images/github.svg" alt="" />
-              </div>
-              <div class="arrow-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="title-main">
-          <h2 class="latest-projects-title">Latest Projects.</h2>
-        </div>
-      </section>
+        </section>
+      </a>
       <div class="kreska"></div>
-      <section id="about-me">
-        <p>
-          I am a young web developer who knows
-          <span>both design and programming.</span> My story with web design and
-          front-end <span>started two years ago.</span> Before that, I had basic
-          knowledge of computer graphics and simple programming that facilitated
-          my everyday work on the computer.
-          <span>I am constantly expanding my knowledge,</span> both in design,
-          where I keep an eye on new trends. As well as in programming where
-          technology continues to surprise us literally from day to day.
-        </p>
-        <div class="title-main">
-          <br />
-          <h2 class="about-me-title">ABOUT ME.</h2>
-        </div>
-      </section>
+      <a name="about">
+        <section id="about-me">
+          <p>
+            I am a young web developer who knows both
+            <span>
+              <a
+                href="https://simple.wikipedia.org/wiki/Web_design"
+                target="_blank"
+                rel="noopener noreferrer"
+                >design</a
+              ></span
+            >
+            and
+            <span>
+              <a
+                href="https://simple.wikipedia.org/wiki/Computer_programming"
+                target="_blank"
+                rel="noopener noreferrer"
+                >programming</a
+              ></span
+            >. My story with web design and front-end
+            <span>
+              <a
+                href="https://simple.wikipedia.org/wiki/Experience"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                started <span id="time-container">72,359,067</span> seconds
+                ago.</a
+              ></span
+            >
+            Before that, I had basic knowledge of computer graphics and simple
+            programming that facilitated my everyday work on the computer.
+            <span
+              ><a
+                href="https://en.wikipedia.org/wiki/Learning"
+                target="_blank"
+                rel="noopener noreferrer"
+                >I am constantly expanding my knowledge</a
+              ></span
+            >, both in design, where I keep an eye on new trends. As well as in
+            programming where technology continues to surprise us literally from
+            day to day.
+          </p>
+          <div class="title-main">
+            <br />
+            <h2 class="about-me-title">ABOUT ME.</h2>
+          </div>
+        </section>
+      </a>
       <div class="kreska"></div>
       <section id="skills">
         <p>
@@ -208,27 +257,9 @@
     <footer>
       <section id="contact">
         <h2>I AM HAPPY TO HELP WITH YOUR NEW PROJECT !</h2>
-        <div class="email-one">
-          <h2 class="email"><span>patryk.stusik@gmail.com</span></h2>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
-        </div>
-      </section>
-      <section id="footer">
-        <div class="cointainer-footer">
-          <div class="left">
-            <p>Check my social profiles</p>
+        <a href="mailto:patryk.stusik@gmail.com">
+          <div class="email-one">
+            <h2 class="email"><span> patryk.stusik@gmail.com</span></h2>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -243,13 +274,66 @@
               />
             </svg>
           </div>
-          <p class="right">
-            <a href=""> Behance</a> | <a href="">LinkedIn</a> |
-            <a href="">Dribble</a> |
-            <a href="">GitHub</a>
-          </p>
-        </div>
+        </a>
       </section>
+      <a name="contactme">
+        <section id="footer">
+          <div class="cointainer-footer">
+            <div class="left">
+              <p>Check my social profiles</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+            <p class="right">
+              <a
+                class="cool-link"
+                href="https://www.behance.net/patrykstusik"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Behance</a
+              >
+              |
+              <a
+                class="cool-link"
+                href="https://www.linkedin.com/in/patryk-stusik-aa863b170/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+              |
+              <a
+                class="cool-link"
+                href="https://dribbble.com/paTiku"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Dribble</a
+              >
+              |
+              <a
+                class="cool-link"
+                href="https://github.com/dandrok"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </p>
+          </div>
+        </section>
+      </a>
     </footer>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script src="script.js"></script>
   </body>
 </html>

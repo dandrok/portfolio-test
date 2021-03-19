@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Ubuntu Mono", monospace !important;
   max-width: 90vw;
@@ -6,6 +10,15 @@ body {
   font-size: 100%;
   color: #403c35;
   background-color: #fcfcfc;
+}
+
+a {
+  text-decoration: none;
+  color: #403c35;
+}
+
+.simple-tippy {
+  font-weight: 700;
 }
 
 .title-main {
@@ -46,6 +59,26 @@ span:hover {
   background-size: 100% 88%;
 }
 
+.cool-link {
+  display: inline-block;
+  color: #403c35;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fef625;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+}
+
 #navbar {
   display: -ms-grid;
   display: grid;
@@ -63,6 +96,20 @@ span:hover {
   -ms-flex-line-pack: center;
       align-content: center;
   font-size: 56px;
+  font-family: "Poiret One", cursive;
+}
+
+#navbar .logo a {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  transition-timing: ease-out;
+}
+
+#navbar .logo a:hover {
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
 }
 
 #navbar .nav {
@@ -78,6 +125,28 @@ span:hover {
   font-size: 1.5rem;
 }
 
+#navbar .nav a {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+  #navbar .nav {
+    grid-gap: 3em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #navbar .nav {
+    grid-gap: 2em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #navbar .nav {
+    grid-gap: 1em;
+  }
+}
+
 #hero .cointainer-hero {
   display: -ms-grid;
   display: grid;
@@ -89,9 +158,45 @@ span:hover {
 
 #hero .cointainer-hero h1 {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
-  grid-column: 1 / span 7;
-  font-size: 5.2rem;
+  -ms-grid-column-span: 10;
+  grid-column: 1 / span 10;
+  font-size: 7rem;
+}
+
+@media screen and (max-width: 1280px) {
+  #hero .cointainer-hero h1 {
+    font-size: 7rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #hero .cointainer-hero h1 {
+    font-size: 5rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #hero .cointainer-hero h1 {
+    font-size: 4rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #hero .cointainer-hero h1 {
+    font-size: 3rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+  }
 }
 
 #hero .arrow {
@@ -114,6 +219,24 @@ span:hover {
           transform: translate(0, 5px);
 }
 
+@media screen and (max-width: 1280px) {
+  #hero .arrow {
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #hero .arrow {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #hero .arrow {
+    left: 50%;
+  }
+}
+
 main .kreska {
   content: "";
   /* This is necessary for the pseudo element to work. */
@@ -126,6 +249,24 @@ main .kreska {
   /* This creates some space between the element and the border. */
   border-top: #403c35 solid 1px;
   /* This creates the border. Replace black with whatever color you want. */
+}
+
+@media screen and (max-width: 1280px) {
+  main .kreska {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main .kreska {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .kreska {
+    width: 100%;
+  }
 }
 
 main #latest-projects .cointainer-projects {
@@ -195,11 +336,32 @@ main #latest-projects .cointainer-projects .div-project .projects-icons .arrow-l
   height: auto;
 }
 
+@media screen and (max-width: 400px) {
+  main #latest-projects .cointainer-projects .div-project {
+    width: 80vw;
+  }
+}
+
 main #latest-projects .cointainer-projects .div-project:hover {
   -webkit-transform: translate(4px, -4px);
           transform: translate(4px, -4px);
+  cursor: default;
   -webkit-box-shadow: -7px 7px 0px 0px #403c35;
           box-shadow: -7px 7px 0px 0px #403c35;
+}
+
+@media screen and (max-width: 700px) {
+  main #latest-projects .cointainer-projects {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+        grid-template-areas: "." "." "." ".";
+    max-width: 300px;
+  }
 }
 
 #about-me p {
@@ -211,6 +373,30 @@ main #latest-projects .cointainer-projects .div-project:hover {
 
 #about-me p span {
   font-weight: 700;
+}
+
+@media screen and (max-width: 1280px) {
+  #about-me p {
+    max-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #about-me p {
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #about-me p {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #about-me p {
+    max-width: 90vw;
+  }
 }
 
 #about-me .title-main .about-me-title {
@@ -226,6 +412,30 @@ main #latest-projects .cointainer-projects .div-project:hover {
 
 #skills p span {
   font-weight: 700;
+}
+
+@media screen and (max-width: 1280px) {
+  #skills p {
+    max-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #skills p {
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #skills p {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #skills p {
+    max-width: 90vw;
+  }
 }
 
 #skills .title-main .skill-title {
@@ -268,9 +478,21 @@ main #latest-projects .cointainer-projects .div-project:hover {
   transition-timing: ease-in-out;
 }
 
+@media screen and (max-width: 400px) {
+  #contact .email-one svg {
+    display: none;
+  }
+}
+
 #contact .email-one svg:hover {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 400px) {
+  #contact h2 span {
+    font-size: 1.5rem;
+  }
 }
 
 #footer {
@@ -292,6 +514,7 @@ main #latest-projects .cointainer-projects .div-project:hover {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  padding-top: 10px;
 }
 
 #footer .cointainer-footer .left {
@@ -305,6 +528,12 @@ main #latest-projects .cointainer-projects .div-project:hover {
   padding-left: 5px;
 }
 
+@media screen and (max-width: 900px) {
+  #footer .cointainer-footer .left {
+    display: none;
+  }
+}
+
 #footer .cointainer-footer .right {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -312,5 +541,13 @@ main #latest-projects .cointainer-projects .div-project:hover {
   justify-items: end;
   -ms-grid-column: end;
       grid-column-start: end;
+}
+
+@media screen and (max-width: 900px) {
+  #footer .cointainer-footer .right {
+    justify-items: center;
+    -ms-grid-column: auto;
+        grid-column-start: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
