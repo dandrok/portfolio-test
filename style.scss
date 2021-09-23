@@ -11,8 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.email-one:hover svg {
+  transform: rotate(-45deg);
+}
+.email-one:hover h2 {
+  background-size: 100% 88%;
+}
+
 body {
-  font-family: "Ubuntu Mono", monospace !important;
+  font-family: 'Ubuntu Mono', monospace !important;
   max-width: 90vw;
   margin: 0 auto !important;
   float: none !important;
@@ -68,7 +75,7 @@ span {
 }
 
 .cool-link::after {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 2px;
@@ -92,7 +99,7 @@ span {
     justify-content: start;
     align-content: center;
     font-size: 56px;
-    font-family: "Poiret One", cursive;
+    font-family: 'Poiret One', cursive;
     a {
       transform: rotate(-90deg);
       transition: all 1s;
@@ -188,7 +195,7 @@ span {
 
 main {
   .kreska {
-    content: ""; /* This is necessary for the pseudo element to work. */
+    content: ''; /* This is necessary for the pseudo element to work. */
     display: block; /* This will put the pseudo element on its own line. */
     /* This will center the border. */
     width: 66%; /* Change this to whatever width you want. */
@@ -212,8 +219,8 @@ main {
       grid-template-rows: 1fr 1fr;
       gap: 10px 10px;
       grid-template-areas:
-        ". ."
-        ". .";
+        '. .'
+        '. .';
       max-width: 600px;
       margin-left: 50px; // margines meidzy ukosnym
       .div-project {
@@ -268,10 +275,10 @@ main {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 10px 10px;
         grid-template-areas:
-          "."
-          "."
-          "."
-          ".";
+          '.'
+          '.'
+          '.'
+          '.';
         max-width: 300px;
       }
     }
@@ -337,7 +344,7 @@ main {
 }
 
 #contact {
-  content: ""; /* This is necessary for the pseudo element to work. */
+  content: ''; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
   /* This will center the border. */
   width: 100%; /* Change this to whatever width you want. */
@@ -361,9 +368,9 @@ main {
         display: none;
       }
     }
-    svg:hover {
-      transform: rotate(-45deg);
-    }
+    // svg:hover {
+    //   transform: rotate(-45deg);
+    // }
   }
   @media screen and (max-width: $small) {
     h2 {
@@ -375,7 +382,7 @@ main {
 }
 
 #footer {
-  content: ""; /* This is necessary for the pseudo element to work. */
+  content: ''; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
   /* This will center the border. */
   width: 100%; /* Change this to whatever width you want. */
